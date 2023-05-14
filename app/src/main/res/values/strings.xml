@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Janken</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="back_button">戻る</string>
+    <string name="janken_text">じゃん・・けん・・・</string>
+    <string name="win_text">あなたの勝ち</string>
+    <string name="lose_text">あなたの負け</string>
+    <string name="draw_text">引き分け</string>
+</resources>

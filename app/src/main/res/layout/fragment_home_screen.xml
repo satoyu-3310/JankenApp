@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="homeViewModel"
+            type="com.example.janken.HomeViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/janken_text"
+            android:textSize="30sp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/choki"/>
+
+        <ImageButton
+            android:id="@+id/gu"
+            android:layout_width="100sp"
+            android:layout_height="100sp"
+            android:onClick="@{()->homeViewModel.onClickGuButton()}"
+            android:scaleType="fitCenter"
+            android:src="@drawable/gu"
+            app:layout_constraintEnd_toStartOf="@+id/choki"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/choki" />
+
+        <ImageButton
+            android:id="@+id/choki"
+            android:layout_width="100sp"
+            android:layout_height="100sp"
+            android:onClick="@{()->homeViewModel.onClickChokiButton()}"
+            android:scaleType="fitCenter"
+            android:src="@drawable/choki"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/pa"
+            android:layout_width="100sp"
+            android:layout_height="100sp"
+            android:onClick="@{()->homeViewModel.onClickPaButton()}"
+            android:scaleType="fitCenter"
+            android:src="@drawable/pa"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/choki"
+            app:layout_constraintTop_toBottomOf="@+id/choki" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
